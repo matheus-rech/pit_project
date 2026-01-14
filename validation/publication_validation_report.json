@@ -1,0 +1,12 @@
+{
+  "dataset": "comprehensive_spatial_dataset",
+  "validation_date": "2026-01-14",
+  "metrics": {
+    "total_samples": 8847,
+    "label_accuracy": 0.803210127726913,
+    "quadrant_accuracy": 1.0,
+    "hallucination_rate": 0.19678987227308692,
+    "hallucination_count": 1741
+  },
+  "verdict": "REVIEW_NEEDED"
+}

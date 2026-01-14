@@ -1,0 +1,10 @@
+{
+  "total_gt_samples": 71970,
+  "total_processed_samples": 8847,
+  "matched_samples": 5916,
+  "instrument_accuracy": 0.4164976335361731,
+  "quadrant_accuracy": 0.3588573360378634,
+  "hallucinated_count": 10,
+  "coordinate_errors": 0,
+  "missing_annotations": 2931
+}

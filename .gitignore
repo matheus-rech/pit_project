@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# Data (too large for git)
+*.csv
+*.jsonl
+*.parquet
+*.mp4
+*.avi
+ground_truth/*.csv
+comprehensive_spatial_dataset/
+spatial_dataset/
+*_annotations/*.json
+
+# Models (use HuggingFace Hub)
+*.bin
+*.safetensors
+*.pth
+*.ckpt
+pitvqa-qwen2vl-*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+test_output/
+demo_output/
+
+# Temporary
+*.log
+*.tmp
+*.bak

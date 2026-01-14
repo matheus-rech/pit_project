@@ -1,0 +1,53 @@
+# PitVQA Surgical Workflow - Requirements
+# ==========================================
+# Unified VLM for Multi-Task Surgical Understanding
+
+# Core Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.40.0
+
+# Computer Vision
+opencv-python>=4.8.0
+Pillow>=10.0.0
+qwen-vl-utils>=0.0.2
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.4.0
+
+# HuggingFace Ecosystem
+datasets>=2.18.0
+huggingface_hub>=0.21.0
+accelerate>=0.27.0
+
+# PEFT and Training
+peft>=0.10.0
+trl>=0.8.0
+bitsandbytes>=0.42.0
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+tqdm>=4.66.0
+
+# Inter-Rater Reliability
+krippendorff>=0.6.0
+
+# Configuration
+PyYAML>=6.0
+omegaconf>=2.3.0
+
+# Annotation Pipeline (optional)
+# openai>=1.0.0
+# google-generativeai>=0.4.0
+
+# Experiment Tracking (optional)
+# wandb>=0.15.0
+# tensorboard>=2.13.0
+
+# Development (optional)
+# pytest>=7.4.0
+# black>=23.0.0
+# flake8>=6.0.0
