@@ -2,6 +2,10 @@
 
 **Clean, organized repository for publication, reproduction, and audit.**
 
+🔗 **GitHub Repository**: https://github.com/matheus-rech/pit_project
+📊 **Dataset**: https://huggingface.co/datasets/mmrech/pitvqa-comprehensive-spatial
+🤖 **Model**: https://huggingface.co/mmrech/pitvqa-qwen2vl-spatial
+
 ---
 
 ## 📁 Directory Structure
@@ -11,12 +15,19 @@ publication_ready/
 ├── README.md                    # This file
 ├── requirements.txt             # Python dependencies
 ├── .gitignore                   # Git ignore patterns
+├── MANIFEST.json                # Project manifest
+│
+├── gradio_demo.py               # 🎬 Interactive Gradio demo
+├── GRADIO_DEMO_README.md        # Demo setup guide
+├── test_gradio_dependencies.py  # Dependency checker
+├── CORRECTED_VALIDATION_REPORT.json  # Proper metrics (100% data, 80% model)
 │
 ├── scripts/                     # Core Python scripts
 │   ├── train_unified_vlm.py
 │   ├── evaluate_unified_vlm.py
 │   ├── create_comprehensive_spatial_dataset.py
-│   └── validate_dataset_integrity.py
+│   ├── validate_dataset_integrity.py
+│   └── publication_validation_report.py
 │
 ├── notebooks/                   # Jupyter/Colab notebooks
 │   ├── train_spatial_qwen2vl_colab.ipynb
@@ -28,6 +39,11 @@ publication_ready/
 │   ├── COLAB_TRAINING_GUIDE.md
 │   ├── VIDEO_DEMO_GUIDE.md
 │   └── SPATIAL_TRAINING_PLAN.md
+│
+├── validation/                  # Validation reports
+│   ├── final_validation_report.json
+│   ├── publication_validation_report.json
+│   └── dataset_integrity_report.json
 │
 ├── data/                        # Data references (not actual data)
 │   ├── DATA_SOURCES.md          # Links to HuggingFace datasets
