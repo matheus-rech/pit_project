@@ -249,9 +249,10 @@ def main():
         print(f"   GPU: {torch.cuda.get_device_name(0)}")
         print(f"   VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
 
-    # Load dataset (disable verification to avoid CastError with complex message structures)
+    # Load dataset (let library infer schema to handle multimodal message structures)
     print(f"\n📊 Loading dataset: {DATASET_ID}")
-    dataset = load_dataset(DATASET_ID, verification_mode='no_checks')
+    # Setting features=None allows automatic schema inference from data
+    dataset = load_dataset(DATASET_ID, features=None)
     print(f"   Train: {len(dataset['train']):,} samples")
     print(f"   Validation: {len(dataset['validation']):,} samples")
 
