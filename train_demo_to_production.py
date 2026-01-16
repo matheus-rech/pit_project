@@ -249,10 +249,25 @@ def main():
         print(f"   GPU: {torch.cuda.get_device_name(0)}")
         print(f"   VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
 
-    # Load dataset (let library infer schema to handle multimodal message structures)
+    # Load dataset in streaming mode to bypass schema validation, then convert to regular dataset
     print(f"\n📊 Loading dataset: {DATASET_ID}")
-    # Setting features=None allows automatic schema inference from data
-    dataset = load_dataset(DATASET_ID, features=None)
+    print("   Using streaming mode to handle complex multimodal structures...")
+
+    # Load as streaming dataset (bypasses Arrow schema validation)
+    from datasets import Dataset, DatasetDict
+    stream_train = load_dataset(DATASET_ID, split='train', streaming=True)
+    stream_val = load_dataset(DATASET_ID, split='validation', streaming=True)
+
+    # Convert streaming to regular dataset (this loads all data into memory)
+    print("   Converting to in-memory dataset...")
+    train_data = list(stream_train)
+    val_data = list(stream_val)
+
+    dataset = DatasetDict({
+        'train': Dataset.from_list(train_data),
+        'validation': Dataset.from_list(val_data)
+    })
+
     print(f"   Train: {len(dataset['train']):,} samples")
     print(f"   Validation: {len(dataset['validation']):,} samples")
 
